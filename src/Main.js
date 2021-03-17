@@ -4,6 +4,7 @@ import LatestRelease from './LatestRelease';
 import './App.css';
 import PopularArtist from './PopularArtist';
 import Themes from './Themes';
+import LatestEnglish from './LatestEnglish';
 class Main extends React.Component{
 
     render(){
@@ -13,6 +14,7 @@ class Main extends React.Component{
        <LatestRelease />
        <PopularArtist />
        <Themes/>
+       <LatestEnglish />
        </div>
        );
     }
