@@ -454,8 +454,9 @@ body{
     margin-top:27px;
     color:turquoise;
   }
-  .aside-dropdown label i{
+  .aside-icon{
     margin-left:30px;
+    cursor: pointer;
   }
   .aside-dropdown-list{
     margin:0;
@@ -465,11 +466,15 @@ body{
     background-color: white;
     margin-bottom:3px;
     padding:3px;
-    text-align: middle;
     list-style: none;
-    width:120px;
-    display:none;
+    width:100px;
+    display:block;
     margin-left:0;
+    border-radius: 5px;
+    height:15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
   }
   .aside-dropdown-list li a{
     text-decoration: none;
@@ -477,13 +482,7 @@ body{
     font-size:0.8rem;
     font-family: Times New Roman;
   }
-  .aside-dropdown input {
-    visibility:hidden;
-  }
-  /*making cliclon effect on aside dropdown*/
-  .aside-dropdown input:checked~ .aside-dropdown-list li{
-    display:block;
-  }
+  
   /*styling the main of the aside section*/
   .my-playlist-albums{
     height:60px;
@@ -527,7 +526,7 @@ body{
     font-family: sans-serif;
     font-size:0.6rem;
   }
-  .my-playlist-albums i{
+  .FavIcon{
     color:white;
     position: absolute;
     margin-left:95%;
