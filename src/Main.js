@@ -1,11 +1,14 @@
 import React from 'react';
-import Carousal from './Carousal';
+import Banner from './Banner';
+import LatestRelease from './LatestRelease';
+import './App.css';
 class Main extends React.Component{
 
     render(){
        return(
        <div className="main">
-       <Carousal/>
+       <Banner/>
+       <LatestRelease />
        </div>
        );
     }

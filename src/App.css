@@ -1,0 +1,692 @@
+
+body{
+    
+    font-family:sans-serif;
+    width:100%;
+    background-color:#000124;
+    margin:0;
+  }
+  /*styling the header of the page */
+  .page-header{
+    width:100%;
+    margin-top:0px;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    z-index:99;
+    background-color:#00011b;
+  }
+  /*styling the webpage logo in the top left of the header*/
+  .logo{
+    
+    margin-top:5px;
+    margin-left:0;
+    height:100px;
+    width:100px;
+    padding:0px 0px 0px 0px;
+  }
+  /*styling the favourites in header*/
+  .favourites{
+    color:white;
+    font-size:20px;
+    letter-spacing:0.1rem;
+    text-decoration:none;
+    display:inline-block;
+    margin-top:40px;
+    margin-left:1%;
+  }
+  /*styling the search bar in the header*/
+  .search{
+    display:flex;
+    border-radius:20px;
+    background-color:#203354 ;
+    margin-left:30%;
+    margin-top:35px;
+    width:350px;
+    height:40px;
+    
+  }
+  .search-icon{
+    display:inline-block;
+    color:white;
+    margin-top:12px;
+    margin-left:10px;
+    margin-right:16px;
+  }
+  .search input{
+  
+    text-align:center ;
+    height:100%;
+    border:0px solid transparent;
+    color:white;
+    font-size:17px;
+    padding:px 8px 8px 8px;
+    outline:none;
+    background-color:transparent;
+    width:75%;
+  }
+  .voice-button{
+    
+    outline: none;
+    color:white;
+    margin-left:18px;
+    margin-right:5px;
+    margin-top:12px;
+    border:0px solid transparent;
+    
+  }
+  i{
+    
+    font-size:17px;
+    
+  }  
+  /*styling the bell icon in the header*/
+  .bell-icon{
+   
+    margin-left:1%;
+    margin-top:42px;
+  }
+  
+  .bell{
+    font-size:30px;
+    color:white;
+    position: relative;
+  
+  }
+  .red-dot{
+   position:absolute; 
+  margin-left:-8px;
+  margin-top:6px;
+  color:red;
+  font-size:0.5rem;
+  }
+  /*styling the account-holder image in the top right of the header*/
+  .account-holder-image{
+    margin-left:1%;
+    margin-top:35px;
+    display:inline-block;
+  }
+  .account-holder-image img{
+    border-radius: 50%;
+    background-size:contain;
+    height:50px;
+    width:50px;
+  }
+  /*making the header responsive*/
+  @media(max-width:1150px){
+    .search{
+        margin-left:5%;
+    }
+  }
+  @media(max-width:819px){
+   .search{
+       width:200px
+   }
+    
+    
+    .favourites{
+        display:none;
+    }
+    
+    .bell-icon{
+        display:none;
+    }
+  }
+  /*styling the main section*/
+  .main{
+    width:63%;
+    height:auto;
+    margin-left:60px;
+    display: inline-block;
+   
+  }
+  section{
+    width:100%;
+    height:auto;
+   margin-left:0px;
+    
+  }
+  /*styling the first section of main i.e Banner section*/
+  
+  .slider{
+     height:auto;
+     width:100%;
+     margin-top:80px;
+     
+  }
+  .slider img{
+  height:300px;
+  width:300px;
+  transition:0.75s;
+  margin-left: 10px;
+  }
+  .slider img:hover{
+    transform:scale(1.2);
+  }
+  .slider img:hover  img{
+    transform:scale(0.8);
+  }
+  .font-color{
+    color:white;
+    
+  } 
+  
+  
+  /*styling the second section of main i.e latest release section*/
+  
+  .latest-release h2{
+    margin-top:50px;
+    margin-left:0;
+  }
+  .latest-release-album{
+    display:flex;
+    flex-wrap:wrap; 
+    justify-content:space-between;
+    height:auto;
+    width:100%;
+    
+  }
+  .content{/*this is the div that conatins image and information about the album in latest release*/
+    height:200px;
+    width:400px;
+    margin-bottom:30px;
+    margin-left:0px;
+    display:inline-block;
+    
+  }
+  .content img{
+  height:90%;
+  width:40%;
+  margin:0;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  }
+  .info{/*this div has the album name and release date */
+    
+    display:inline-block;
+    height:200px;
+    width:80px;
+    position:absolute;
+    margin-left:5px;
+  }
+  .info h4{
+  padding-top:100%;
+  margin-left:2px;
+  margin-top:0px;
+  font-size:0.8rem;
+  }
+  
+  .drop-down-menu{/*dropdown menu that opens on clicking on the three dot icon in the latest release section*/
+    display:inline-block;
+    margin-left:50px;
+    position: absolute;
+    
+  }
+  .hide-drop-down{
+    display: none;
+  }
+  .drop-down-menu-list{
+    margin-top:0px;
+  }
+  
+  .drop-down-menu-list  li{
+    background-color: white;
+    margin-bottom:3px;
+    margin-left:20px;
+    text-align: start;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width:130px;
+    height:20px;
+    border-radius: 5px;
+    color: orange;
+  }
+  .drop-down-menu-list  li a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color:gray;
+    font-size:0.8rem;
+  }
+  .list{
+    color:gray;
+    transform: scale(0.8);
+    
+  }
+  
+ 
+  .bar{/*bar is the div that contains three dot icon*/
+    margin-top:0px;
+    cursor: pointer;
+  }
+  .bar{
+    color:turquoise;
+    margin-left:170px;
+    margin-top:0px;
+    
+  }
+  /*styling the  3rd section of main i.e popular artist*/
+  .popular-artist{
+  width:150%;
+  height:auto;
+  }
+  .popular-artist h2{
+    margin-top:0;
+  }
+  .artist-images{
+    height:auto;
+    width:fit-content;
+    margin-bottom:50px;
+    margin-left:0;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    
+  }
+  .artists{
+   height:170px;
+   width:148px;
+   margin-bottom:0px;
+   display:inline-block;
+   text-align: center;
+   margin-top:15px;
+   margin-left:10px;
+  }
+  .artists img{
+    height:140px;
+    width:140px;
+    border-radius:50%;
+    background-size: cover;
+  
+  }
+  .artists h4{
+    color:wheat;
+    margin-top:0;
+    
+  }
+                                  /*styling the 4th section of the main i.e  genre*/
+  
+  .genre{
+    width:150%;
+  }
+  .stations{
+   width:fit-content;
+   border-radius:30px;
+   margin-bottom:0px;
+   background-color:gray;
+   margin-right:10px;
+  }
+  .station-logo{
+    display: inline-block;
+  }
+  .music-styles{
+    display:inline-block;
+    height:110px;
+    width:110px;
+    position: relative;
+    margin-left:5px;
+  }
+  .music-styles img{
+    width:110px;
+    height:110px;
+    border-radius: 50%;
+    opacity:0.6;
+    margin-bottom:45px;
+  }
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color:white;
+    transform: translate(-50%, -50%);
+    font-family:Courier;
+    font-size:1.2rem;
+  }
+  
+  .music-type{
+      margin-top:20px;
+      height:auto;
+  }
+  .zoom-in{
+    overflow: hidden;
+    transition:0.75s; 
+    height:auto;
+    width:300px;
+    margin:0px;
+    position: relative;
+    display: inline-block;
+    margin-left:10px;
+  }
+  
+  .zoom-in img{
+    height:200px;
+    width:280px;
+    transition:0.75s;
+    border:2px solid white;
+  
+  }
+  .zoom-in img:hover{
+      transform:scale(1.2);
+  }
+  
+                 /*styling the 5th section in main i.e latest-songs*/ 
+  
+  .latest-songs{
+      margin-top:60px;
+      width:150%;
+  }
+  .latest-songs h2{
+    color:white;
+  }
+  .latest{
+    width:fit-content;
+      margin:20px 0px 0px 0px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+  }
+  .english-hindi{
+  display:inline-block;
+  margin-bottom:20px;
+  margin-left:15px;
+  }
+  .english-hindi img{
+    height:130px;
+    width:130px;
+    background-size: cover;
+    margin:0;
+  }
+  .english-hindi h4{
+    color:white;
+    padding:0px;
+    margin:0;
+    font-family:Courier;
+  }
+  .english-hindi p{
+    color:white;
+    font-family:Courier;
+    margin:0px;
+  }
+  
+                    /*styling the aside section*/
+  aside{
+    width:27%;
+    height:auto;
+    display: inline-block;
+    margin-left:15px;
+    vertical-align: top;
+    margin-top: 150px;
+    margin-right:0;
+  
+  }
+  /*making the aside section scrollable*/
+  .scroll-bar{
+    overflow: scroll;
+    height:700px;
+  }
+  .scroll-bar::-webkit-scrollbar{ 
+    width:70px;
+  }
+  .scroll-bar::-webkit-scrollbar-corner{
+    background-color: transparent;
+  }
+  /*styling the aside section header*/
+  .aside-header{
+    position: relative;
+  }
+  .aside-header h2{
+    display: inline-block;
+    color:white;
+    font-family: sans-serif;
+  }
+  .aside-header span{
+    color:turquoise;
+    margin-left:30%;
+  }
+  .aside-dropdown{/*making the drop down on the right corner of aside header*/
+    display: inline-block;
+    position:absolute;
+    margin-left:0;
+    margin-top:27px;
+    color:turquoise;
+  }
+  .aside-dropdown label i{
+    margin-left:30px;
+  }
+  .aside-dropdown-list{
+    margin:0;
+    margin-left:-100px;
+  }
+  .aside-dropdown-list li{
+    background-color: white;
+    margin-bottom:3px;
+    padding:3px;
+    text-align: middle;
+    list-style: none;
+    width:120px;
+    display:none;
+    margin-left:0;
+  }
+  .aside-dropdown-list li a{
+    text-decoration: none;
+    color:gray;
+    font-size:0.8rem;
+    font-family: Times New Roman;
+  }
+  .aside-dropdown input {
+    visibility:hidden;
+  }
+  /*making cliclon effect on aside dropdown*/
+  .aside-dropdown input:checked~ .aside-dropdown-list li{
+    display:block;
+  }
+  /*styling the main of the aside section*/
+  .my-playlist-albums{
+    height:60px;
+    width:95%;
+    margin:5px;
+    position: relative;
+    vertical-align: middle;
+  
+  }
+  .my-playlist-albums span{
+    line-height: 60px;
+    color:white;
+    position: absolute;
+    margin-left:10px;
+    font-size:0.6rem;
+  }
+  .my-playlist-albums img{
+    height:45px;
+    width:45px;
+    margin-top:7.5px ;
+    margin-left:35px;
+    position: absolute;
+    
+  
+  }
+  .song-details{
+    position: absolute;
+    margin-left:90px;
+    
+  }
+  .song-details h5{
+    margin-top:15px;
+    margin-bottom:0;
+    padding:0;
+    color:white;
+    font-family: sans-serif;
+  }
+  .song-details p{
+    color:white;
+    margin-top:0;
+    font-family: sans-serif;
+    font-size:0.6rem;
+  }
+  .my-playlist-albums i{
+    color:white;
+    position: absolute;
+    margin-left:95%;
+    margin-top:20px;
+  }
+  
+  
+  
+  @media(max-width:1300px){
+    aside{
+        width:24%;
+    }
+    aside span{
+        margin-left:15%;
+    }
+    .aside-dropdown{
+        margin-left: -50px;
+    }
+    .slider img{
+        width:200px;
+        height:200px;
+    }
+    .scroll-bar::-webkit-scrollbar{ 
+        width:30px;
+    }
+  }
+  /*making the main and aside responsive*/
+  @media(max-width:975px){
+    main{
+        width:90%;
+    }
+    aside{
+        display:none;
+    }
+  }
+  @media(max-width:775px){
+    main{
+        width:85%;
+    }
+  }
+  
+  /*making the slider/corousel section responsive*/
+  @media(max-width:1520px){
+    .slider img{
+        width:250px;
+        height:250px;
+    }
+  }
+  
+  @media(max-width:1310px){
+      .slider img{
+          height:200px;
+          width:200px;
+      }
+  }
+  @media(max-width:1032px){
+    .slider img{
+        margin-left:5px;
+        height:170px;
+        width:170px;
+    }
+  }
+  @media(max-width:966px){
+    .slider img{
+        width:250px;
+        height:250px;
+    }
+  }
+  @media(max-width:890px){
+    .slider img{
+        width:210px;
+        height:200px;
+    }
+  }
+  @media(max-width:775px){
+    .slider{
+        margin-left:-20px;
+    }
+    .slider img{
+        width:170px;
+        
+    }
+  }
+  @media(max-width:640px){
+    main{
+        width:98%;
+        margin-left:10px;
+    }
+    .slider{
+        margin-left:0px;
+    }
+    .slider img{
+        width:150px;
+        margin-left:0;
+    }
+  }
+  
+  /*making the popular artists section responsive*/
+  @media(max-width:1036px){
+  .popular-artist{
+    width:150%;
+  }
+  .artists{
+    width:130px;
+    height:150px;
+    margin-left:5px;
+  }
+  .artists img{
+    width:130px;
+    height:130px;
+  }
+  }
+  @media(max-width:898px){
+    .popular-artist{
+        width:100%;
+    }
+  }
+  /*making the genre section responsive*/
+  @media(max-width:1015px){
+    .genre{
+      width:100% ;
+    }
+    .music-styles{
+        width:100px;
+        height:100px;
+    }
+    .music-styles img{
+        width:100px;
+        height:100px;
+    }
+  }
+  
+  @media(max-width:1046px){
+    .music-type{
+        width:100%;
+    }
+    .zoom-in{
+        width:200px;
+        margin-bottom:10px;
+        text-align: center;
+     }
+     .zoom-in img{
+        width:180px;
+    }
+  }
+  @media(max-width:772px){
+    .zoom-in{
+       width:400px;
+       margin-left:30px;
+       margin-bottom:20px;
+       text-align: center;
+    }
+    .zoom-in img{
+        width:370px;
+    }
+  }
+  @media(max-width:962px){
+    .latest-songs{
+        width:100%;
+    }
+  }
+  
