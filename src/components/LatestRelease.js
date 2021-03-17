@@ -4,11 +4,11 @@ import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import AddIcon from '@material-ui/icons/Add';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import InfoIcon from '@material-ui/icons/Info';
-import img1 from './images/1.jpg'; 
-import img2 from './images/2.jpg';
-import img3 from './images/3.jpg';  
-import img4 from './images/4.jpg'; 
-import './App.css';
+import img1 from '../images/1.jpg'; 
+import img2 from '../images/2.jpg';
+import img3 from '../images/3.jpg';  
+import img4 from '../images/4.jpg'; 
+import '../App.css';
 
 export default class LatestRelease extends Component {
 
@@ -21,41 +21,46 @@ export default class LatestRelease extends Component {
                   
                   img:img1,
                   id:1, 
-                  name:"lalal",
-                  date:"2018"
-                  
-                  
+                  name:"Firee",
+                  date:"Mar 2018",
+                  isOpen: false, 
               },
               {
               
                 img:img2,
                 id:2, 
-                name:"lalal",
-                date:"2018"
+                name:"Osmin",
+                date:"Nov 2018",
+                isOpen: false,
             },
             {
                
                 img:img3,
                 id:3, 
-                name:"lalal",
-                date:"2020"
+                name:"Shape",
+                date:"Mar 2020",
+                isOpen: false,
             },
             {
                 img:img4,
                 id: 4, 
-                name:"lalal",
-                date:"2019"
+                name:"Beautif",
+                date:"Aug 2019",
+                isOpen: false,
             }
-            ], 
-            isOpen: false,
-        }
+            ],
+            }
     }
 
-    handleToggle = () => {
+    handleToggle = (image) => {
+        const {images} = this.state;
+        const index = images.indexOf(image);
+        images[index].isOpen = !images[index].isOpen
         this.setState({
-            isOpen: !this.state.isOpen
+            images
+
         })
-    }
+    }   
 
     render() {
         return (
@@ -64,7 +69,7 @@ export default class LatestRelease extends Component {
         <div className="latest-release-album" >
        {
            this.state.images.map((image) => {
-               let {img, id, name,date} = image;
+               let {img, id, name,date, isOpen} = image;
                return(  
                 <div className="content" key={id}>
                 <a href="#"><img src={img}/></a>
@@ -75,8 +80,8 @@ export default class LatestRelease extends Component {
                 </h4>
                 </div>
                 <div className="drop-down-menu">
-                <div className="bar" onClick={this.handleToggle}><MoreHorizIcon /></div>
-                <ul className={this.state.isOpen ? "drop-down-menu-list" : "hide-drop-down"}>
+                <div className="bar" onClick={() => this.handleToggle(image)}><MoreHorizIcon /></div>
+                <ul className={isOpen ? "drop-down-menu-list" : "hide-drop-down"}>
                 <li><a href="#"><PlayArrowIcon className="list" />Play Now</a></li>
                 <li><a href="#"><AddIcon className="list"/>Add to queue</a></li>
                 <li><a href="#"><FavoriteIcon className="list"/>Add to favourites</a></li>

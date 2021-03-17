@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from './Banner';
 import LatestRelease from './LatestRelease';
-import './App.css';
+import '../App.css';
 import PopularArtist from './PopularArtist';
 import Themes from './Themes';
 import LatestEnglish from './LatestEnglish';

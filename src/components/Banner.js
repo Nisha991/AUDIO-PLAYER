@@ -1,8 +1,8 @@
 import React from 'react';
-import img123 from './images/123.jpg'; 
-import img11 from './images/11.jpg';
-import img121 from './images/121.jpg';  
-import './App.css';
+import img123 from '../images/123.jpg'; 
+import img11 from '../images/11.jpg';
+import img121 from '../images/121.jpg';  
+import '../App.css';
 
 
 class Banner extends React.Component{

@@ -3,13 +3,14 @@ import SearchIcon from '@material-ui/icons/Search';
 import MicIcon from '@material-ui/icons/Mic';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-import img1 from './images/logo3.png';
-import './App.css';
+import {Link} from 'react-router-dom';
+import img1 from '../images/logo3.png';
+import '../App.css';
 const Navbar=(props)=>{
         return(
                  <header className="page-header">
                      <div className="logo11">
-                    <a href="#"><img src={img1} className="logo" /></a>
+                    <Link to="/"><img src={img1} className="logo" /></Link>
                      </div>
                      <div>
                     <a href="#" className="favourites">Favourites</a>

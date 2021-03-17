@@ -1,0 +1,564 @@
+main{
+    width:60%;
+    margin-left:60px;
+    display: inline-block;
+}
+section{
+    width:100%;
+    height:auto;
+    display:inline-block;
+    display:flex;
+    flex-direction: column;
+    margin-left:0px;
+    
+}
+.musician-photo-details{/*this div is for the large image and details about the perticular artist/band*/
+    width:100%;
+    height:auto;
+    margin-top:130px;
+    margin-bottom:15px;
+    background-color:#000237;
+
+    position: relative;
+}
+.musician-photo{
+    height:250px;
+    width:40%;
+    display: inline-block;
+}
+.musician-photo img{
+    height:100%;
+    width:100%;
+    margin:0;
+    background-size: contain;
+}
+.musician-details{
+    height:100%;
+    width:54%;
+    color:gray;
+    display: inline-block;
+    margin-left:20px;
+    position: absolute;
+    margin-top:35px;
+}
+.musician-details h2{
+    display: inline-block;
+    color:white;
+    margin-bottom:0;
+    margin-top:0;
+}
+.musician-details h5{
+    margin-left:300px;
+    font-size:0.8rem;
+    display: inline;
+}
+.musician-details p{
+    margin-bottom:0;
+    font-size:0.65rem;
+    
+}
+.play__button{
+    height:30px;
+    width:115px;
+    margin-top:20px;
+    margin-bottom:10px;
+    background-image:linear-gradient(90deg,#1c51fe,#1cfea9);
+    border:0px solid transparent;
+    outline: transparent;
+    color:white;
+    font-weight: 400;
+}
+.musician-details h6{
+    margin:0;
+}
+.musician-details span{
+    color:white;
+    font-size:0.9rem;
+    margin-left:50px;
+}
+/*styling the divs in the main section which have a list of songs from a particular musician/band*/
+.musician-album-list{
+    height:60px;
+    width:100%;
+    margin-bottom:7px;
+    position: relative;
+    vertical-align: middle;
+    background-color:#111934;
+}
+.musician-album-list span{
+    line-height: 60px;
+    color:white;
+    position: absolute;
+    margin-left:10px;
+    font-size:0.6rem;
+}
+.musician-album-list img{
+    height:45px;
+    width:45px;
+    margin-top:7.5px ;
+    margin-left:35px;
+    position: absolute;
+}
+.song-details{
+    position: absolute;
+    margin-left:90px;
+}
+.song-details h5{
+    margin-top:15px;
+    margin-bottom:0;
+    padding:0;
+    color:white;
+    font-family: sans-serif;
+}
+.song-details p{
+    color:white;
+    margin-top:0;
+    font-family: sans-serif;
+    font-size:0.6rem;
+}
+.heart{
+    color:white;
+    position: absolute;
+    margin-left:95%;
+    margin-top:20px;
+}
+.plus{
+    color:white;
+    position: absolute;
+    margin-left:90%;
+    margin-top:20px;
+}
+/*style for aside section*/
+aside{
+    width:28%;
+    height:auto;
+    display: inline-block;
+    margin-left:100px;
+    vertical-align: top;
+    margin-top: 100px;
+    margin-right:0;
+}
+                                      /* styles for aside section(similar artits)*/
+
+/*style for section header ie. section1 (similar artits)*/
+.aside-header1 h2{
+    display: inline-block;
+    margin-right:123px;
+    color:white;
+    font-family: sans-serif;
+}
+.aside-header1 span{
+    color:turquoise;
+    font-size:0.8rem;
+    
+}
+/*making the section2(similar artists) in aside section scorrable*/
+.section1{
+    height:210px;
+    overflow:scroll;
+}
+.section1::-webkit-scrollbar{ 
+    width:70px;
+}
+.section1::-webkit-scrollbar-corner{
+    background-color: transparent;
+}
+/*styling the content in aside section (similar artists)*/
+.similar-artists{
+  position: relative;
+  height:60px;
+  width:95%;
+  margin-bottom:8px;
+}
+.similar-artists img{
+    position: absolute;
+    height:60px;
+    width:60px;
+}
+.song-details-list{
+    position: absolute;
+    margin-left:70px;
+    
+}
+.song-details-list h5{
+    margin-top:15px;
+    margin-bottom:0;
+    padding:0;
+    color:white;
+    font-family: sans-serif;
+}
+.song-details-list p{
+    color:white;
+    margin-top:0;
+    font-family: sans-serif;
+    font-size:0.6rem;
+}
+/*styling the drop down menu in the similar artists section*/
+
+.bar{/*bar refers to the three dots in the right corner that opens up a menu on click*/
+    margin-top:0px;
+    margin-left:93%;
+    display: inline-block;
+}
+.bar i{
+    color:white;
+}
+.click{
+    margin:0;
+}
+.click  li{
+    background-color: white;
+    margin-bottom:3px;
+    padding:3px;
+    margin-left:56%;
+    text-align: start;
+    list-style: none;
+    display: none;
+    width:120px;
+}
+.click li i{
+    color:gray;
+    font-size:0.8rem;
+}
+.dropdown-menu input{
+    display:none;
+}
+.dropdown-menu label{
+    cursor: pointer;
+    margin:0;
+}
+input:checked~ .click li{
+     display:block;
+ }
+
+                                            /* styles for aside section(recently played)*/
+
+/*style for section header ie. section2 (recently played)*/
+.aside-header2 h2{
+    display: inline-block;
+    margin-right:100px;
+    color:white;
+    font-family: sans-serif;
+}
+.aside-header2 span{
+    color:turquoise;
+    font-size:0.8rem;
+    
+}
+/*making the  section2 i.e recently played section scrollable*/
+.section2{
+    overflow: scroll;
+    height:400px;
+}
+.section2::-webkit-scrollbar{ 
+    width:70px;
+    
+}
+.section2::-webkit-scrollbar-corner{
+    background-color: transparent;
+}
+/*styling the content in aside section (recently played)*/
+.recently-played-albums{
+    height:60px;
+    width:95%;
+    position: relative;
+    vertical-align: middle;
+
+}
+.recently-played-albums span{
+    line-height: 60px;
+    color:white;
+    position: absolute;
+    font-size:0.6rem;
+}
+.recently-played-albums img{
+    height:45px;
+    width:45px;
+    margin-top:7.5px;
+    margin-left:35px;
+    position: absolute;
+}
+.song-details{
+    position: absolute;
+    margin-left:90px;
+    
+}
+.song-details h5{
+    margin-top:15px;
+    margin-bottom:0;
+    padding:0;
+    color:white;
+    font-family: sans-serif;
+}
+.song-details p{
+    color:white;
+    margin-top:0;
+    font-family: sans-serif;
+    font-size:0.6rem;
+}
+.recently-played-albums i{
+    color:white;
+    position: absolute;
+    margin-left:94%;
+    margin-top:20px;
+}
+/*style for the audio player*/
+footer{
+    position:fixed;
+    margin-top:-200px;
+    
+}
+.audio-player{
+    width:100vw;
+    height:12vh;
+    background-color: black;
+    border-top: 1.5px solid turquoise;
+    
+}
+.album-details{/*this div contains selemts in the left corner of the audio player*/
+    display: inline-block;
+    margin-top:17px;
+    position:relative;
+    height:auto;
+    width:270px;
+    margin-left:6%;
+}
+.album-details img{
+    height:50px;
+    width:50px;
+}
+.album-details h5{
+    color:white;
+    font-family:sans-serif;
+    margin:0px;
+    padding:0;
+    width:6rem;
+    height:1rem;
+    overflow:hidden;
+}
+.album-details p{
+    color:white;
+    font-family:sans-serif;
+    margin:0;
+    padding:0px;
+    margin-top:6px;
+    font-size:0.7rem;
+}
+.heart-ban-icon{
+    margin-left:130px;
+    position: absolute;
+    display: inline-block;
+    width:80px;
+}
+.heart-ban-icon i{
+    margin-left:15px;
+    font-size: 1.3rem;
+    color:lightgrey;
+    
+}
+.audio-controls{/*this div contains the middle section of the audio player which shows the music progress*/
+    display: inline-block;
+    width:410px;
+    margin-top:6px;
+    margin-left:13%;
+    position: relative;
+}
+.media-control-icons{
+    width:500px;
+    margin-left:26%;
+    padding:0px 0px 5px 0px;
+}
+.media-control-icons i{
+    color:lightgray;
+    font-size:2rem;
+}
+.progress-bar{
+    display: inline-block;
+    height:1.3px;
+    width:350px;
+    background-color: grey;
+    color:gray;
+    
+}
+.progress{
+    width:40%;
+    height:100%;
+    margin:0;
+    
+    padding:0;
+    background-color:yellowgreen;
+    display: inline-block;
+}
+.time{
+    display: inline-block;
+    color:gray;
+    font-size:0.7rem;
+    margin:0;
+    padding:0;
+}
+.progress-thumb{
+    margin-left:32%;
+    margin-top:-8px;
+    position:absolute;
+}
+.progress-thumb i{
+    color:yellowgreen;
+}
+.volume{/*this div contains the elements at the right corner of the audio player whoch has the volume controls*/
+    width:270px;
+    height:100%;
+    display: inline-block;
+    margin-left:13%;
+    margin-top:0;
+    position: relative;
+    vertical-align: top;
+}
+.volume i{
+    color:lightgrey;
+    font-size: 1.3rem;
+    margin-left:15px;
+    margin-top:30px;
+}
+.volume-bar{
+    display:inline-block;
+    width:80px;
+    background-color: grey;
+    height:1.3px;
+    margin-left:10px;
+    vertical-align: middle;
+}
+.volume-control{
+    width:60%;
+    height:100%;
+    background-color:yellowgreen;
+    display: inline-block;
+    margin:0;
+}
+.volume-thumb{
+    margin-top:-4px;
+    display: inline-block;
+    position: absolute;
+}
+.volume-thumb i{
+    color:yellowgreen;
+    font-size:0.7rem;
+    margin:0;
+}
+
+
+
+
+
+
+
+
+
+@media(max-width:1433px){
+    aside{
+        margin-left:15px;
+        width:31%;
+    }
+    
+}
+@media(max-width:1000px){
+    main{
+        width:86%;
+    }
+}
+@media(max-width:1000px){
+    aside{
+        display:none;
+    }
+}
+@media(max-width:1242px){
+    .musician-details{
+        margin-top:5px;
+    }
+    .musician-details h5{
+    margin-left:30%;
+    }
+    .aside-header1 span{
+        display: block;
+        padding-top:6px;
+        padding-bottom:6px;
+    }
+    .aside-header2 span{
+        display: block;
+        padding-top:6px;
+        padding-bottom:6px;
+    }
+    .aside-header1 h2{
+        margin-bottom:0;
+    }
+    .aside-header2 h2{
+        margin-bottom:0;
+    }
+}
+@media(max-height:716px){
+    footer{
+        margin-top:-235px;
+    }
+}
+@media(max-width:1444px){
+    .volume{
+        margin-left:10%;
+    }
+    .audio-controls{
+         margin-left:10%;
+    }
+    .album-details{
+        margin-left:10px;
+    }
+}
+@media(max-width:1180px){
+    .volume{
+        margin-left:5%;
+    }
+    .audio-controls{
+         margin-left:5%;
+    }
+    .album-details{
+        margin-left:5px;
+    }
+}
+@media(max-width:1000px){
+    .album-details{
+        display: none;
+    }
+    .volume{
+        margin-left:10%;
+    }
+    .audio-controls{
+        margin-left:10%;
+    }
+    
+}
+@media(max-width:576px){
+    main{
+        margin-left:30px;
+    }
+    .musician-details h5{
+        margin:0;
+        display: block;
+        padding-top:3px;
+        padding-bottom:3px;
+    }
+    .musician-details p{
+        margin:0;
+        padding-top:5px;
+    }
+    .heart{
+        margin-left:90%;
+    }
+    .plus{
+        margin-left:80%;
+    }
+}
+
+
+
+
+
+
+
+

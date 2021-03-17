@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import img1 from './images/art1.jpg'; 
-import img2 from './images/art2.jpg';
-import img3 from './images/art3.jpg';  
-import img4 from './images/art4.jpg'; 
-import img5 from './images/art5.jpg';  
-import img6 from './images/art6.jpg'; 
+import img1 from '../images/art1.jpg'; 
+import img2 from '../images/art2.jpg';
+import img3 from '../images/art3.jpg';  
+import img4 from '../images/art4.jpg'; 
+import img5 from '../images/art5.jpg';  
+import img6 from '../images/art6.jpg'; 
+import {Link} from 'react-router-dom';
 
 export default class PopularArtist extends Component {
     constructor(props) {
@@ -65,7 +66,7 @@ export default class PopularArtist extends Component {
                             const {img, name, id} = arts;
                                 return(
                                     <div className="artists" key={id}>
-                                    <a href="single-screen.html"><img src={img} /></a> 
+                                    <Link to="/artistPage"><img src={img} /></Link> 
                                     <h4>{name}</h4>
                                     </div>
                                     

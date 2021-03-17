@@ -1,14 +1,14 @@
 import React from 'react';
-import img1 from './images/logos.png'; 
-import img2 from './images/img1.jpg';
-import img3 from './images/img2.jpg';  
-import img4 from './images/15.jpg'; 
-import img5 from './images/13.jpg';  
-import img6 from './images/12.jpg'; 
-import img7 from './images/img6.jpeg'; 
-import img8 from './images/type1.jpg';
-import img9 from './images/type2.jpg';  
-import img10 from './images/type3.jpg'; 
+import img1 from '../images/logos.png'; 
+import img2 from '../images/img1.jpg';
+import img3 from '../images/img2.jpg';  
+import img4 from '../images/15.jpg'; 
+import img5 from '../images/13.jpg';  
+import img6 from '../images/12.jpg'; 
+import img7 from '../images/img6.jpeg'; 
+import img8 from '../images/type1.jpg';
+import img9 from '../images/type2.jpg';  
+import img10 from '../images/type3.jpg'; 
 
 export default function Themes() {
     return (
