@@ -3,6 +3,7 @@ import Banner from './Banner';
 import LatestRelease from './LatestRelease';
 import './App.css';
 import PopularArtist from './PopularArtist';
+import Themes from './Themes';
 class Main extends React.Component{
 
     render(){
@@ -11,6 +12,7 @@ class Main extends React.Component{
        <Banner/>
        <LatestRelease />
        <PopularArtist />
+       <Themes/>
        </div>
        );
     }
