@@ -203,7 +203,7 @@ export default class Aside extends Component {
             }
     render() {
         return (
-            <aside>
+            <aside className="mainAside">
                     <div className="aside-header">
                       <h2> My Playlist</h2>
                       <span>Queue</span>

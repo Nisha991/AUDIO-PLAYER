@@ -1,3 +1,10 @@
+body{
+    
+    font-family:sans-serif;
+    width:100%;
+    background-color:#000124;
+    margin:0;
+  }
 main{
     width:60%;
     margin-left:60px;
@@ -129,10 +136,10 @@ section{
     margin-top:20px;
 }
 /*style for aside section*/
-aside{
-    width:28%;
-    height:auto;
+.aside{
+    width:27%;
     display: inline-block;
+    height:auto;
     margin-left:100px;
     vertical-align: top;
     margin-top: 100px;
@@ -140,7 +147,8 @@ aside{
 }
                                       /* styles for aside section(similar artits)*/
 
-/*style for section header ie. section1 (similar artits)*/
+
+  /*style for section header ie. section1 (similar artits)*/
 .aside-header1 h2{
     display: inline-block;
     margin-right:123px;
@@ -193,8 +201,9 @@ aside{
     font-family: sans-serif;
     font-size:0.6rem;
 }
-/*styling the drop down menu in the similar artists section*/
 
+
+/*styling the drop down menu in the similar artists section*/
 .bar{/*bar refers to the three dots in the right corner that opens up a menu on click*/
     margin-top:0px;
     margin-left:93%;
@@ -227,9 +236,19 @@ aside{
     cursor: pointer;
     margin:0;
 }
-input:checked~ .click li{
-     display:block;
- }
+
+/*style for aside section*/
+aside{
+    width:28%;
+    height:auto;
+    display: inline-block;
+    margin-left:100px;
+    vertical-align: top;
+    margin-top: 100px;
+    margin-right:0;
+}
+
+
 
                                             /* styles for aside section(recently played)*/
 
@@ -296,7 +315,7 @@ input:checked~ .click li{
     font-family: sans-serif;
     font-size:0.6rem;
 }
-.recently-played-albums i{
+.Icon{
     color:white;
     position: absolute;
     margin-left:94%;
@@ -444,6 +463,9 @@ footer{
     font-size:0.7rem;
     margin:0;
 }
+
+
+
 
 
 

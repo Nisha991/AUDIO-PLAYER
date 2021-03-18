@@ -412,8 +412,8 @@ body{
     margin:0px;
   }
   
-                    /*styling the aside section*/
-  aside{
+                    /*styling the mainAside section*/
+  .mainAside{
     width:27%;
     height:auto;
     display: inline-block;
@@ -423,7 +423,7 @@ body{
     margin-right:0;
   
   }
-  /*making the aside section scrollable*/
+  /*making the .mainAside section scrollable*/
   .scroll-bar{
     overflow: scroll;
     height:700px;
