@@ -36,7 +36,8 @@ export default class SimilarArtist extends Component {
                   img:img1,
                   name:"Lady Gaga",
                   id:1,
-                  singer:"Edle"
+                  singer:"Edle",
+                  isOpen:false,
                   
               },
               {
@@ -44,32 +45,37 @@ export default class SimilarArtist extends Component {
                 img:img2,
                 id:2, 
                 name:"Taylor Swift",
-               singer:"Edle"
+               singer:"Edle",
+               isOpen:false,
             },
             {
                
                 img:img3,
                 id:3, 
                 name:"Rihana",
-               singer:"Edle"
+               singer:"Edle",
+               isOpen:false,
             },
             {
                 img:img4,
                 id: 4, 
                 name:"Ed Shereen",
-                singer:"Edle"
+                singer:"Edle",
+                isOpen:false,
             },
             {
                 img:img5,
                 id:5,
                 name:"Bruno Mars",
-                singer:"Edle"
+                singer:"Edle",
+                isOpen:false,
             },
             {
                 img:img6,
                 id:6,
                 name:"Adam Lavine",
-                singer:"Edle"
+                singer:"Edle",
+                isOpen:false,
             }
             ], 
             recent:[
@@ -195,16 +201,19 @@ export default class SimilarArtist extends Component {
                     },
 
             ],
-             isOpen:false,
         }
     }
     
 
-    handleToggle = () => {
+    handleToggle = (item) => {
+        const {artist} = this.state;
+        const index = artist.indexOf(item);
+        artist[index].isOpen = !artist[index].isOpen
         this.setState({
-            isOpen: !this.state.isOpen,
+            artist
         })
-    }
+    }   
+
     render() {
         return (
                  <aside>
@@ -216,18 +225,18 @@ export default class SimilarArtist extends Component {
                     { this.state.artist.map((art)=>{
                         const {img,name,id,singer}=art;
                         return(
-                        <div class="similar-artists">
+                        <div class="similar-artists" key={id}>
                            <img src={img}/>
                            <div className="song-details-list">
                            <h5>{name}</h5>
                            <p>{singer}</p>
                            </div>
                            <div class="dropdown-menu">
-                              <div className="icon1"><div className="bar"><MoreHorizIcon /></div></div>
-                              <ul className="click">
-                              <li><a href="#"><PlayArrowIcon className="list" />Play Now</a></li>
-                              <li><a href="#"><FavoriteIcon className="list"/>Add to favourites</a></li>
-                            <li><a href="#"><InfoIcon className="list"/>Get info</a></li>
+                              <div className="icon1"><div className="bar" onClick={() => this.handleToggle(art)}><MoreHorizIcon className="bari" /></div></div>
+                              <ul className={art.isOpen ? "click" : "hide-aside"}>
+                              <li><a href="#" className="list"><PlayArrowIcon />Play Now</a></li>
+                              <li><a href="#" className="list"><FavoriteIcon />Add to favourites</a></li>
+                              <li><a href="#" className="list"><InfoIcon />Get info</a></li>
                               </ul>
                            </div>
                         </div>

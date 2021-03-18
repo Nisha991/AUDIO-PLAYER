@@ -168,6 +168,9 @@ section{
 .section1::-webkit-scrollbar{ 
     width:70px;
 }
+.hide-aside{
+    display: none;
+}
 .section1::-webkit-scrollbar-corner{
     background-color: transparent;
 }
@@ -209,7 +212,7 @@ section{
     margin-left:93%;
     display: inline-block;
 }
-.bar i{
+.bari{
     color:white;
 }
 .click{
@@ -218,16 +221,22 @@ section{
 .click  li{
     background-color: white;
     margin-bottom:3px;
-    padding:3px;
     margin-left:56%;
     text-align: start;
     list-style: none;
-    display: none;
-    width:120px;
+    width:130px;
+    display: flex;
+    align-items: center;
+    
 }
-.click li i{
+.click  li a{
+    display: flex;
+    align-items: center;
+}
+.list{
     color:gray;
     font-size:0.8rem;
+    text-decoration: none;
 }
 .dropdown-menu input{
     display:none;
@@ -325,6 +334,7 @@ aside{
 footer{
     position:fixed;
     margin-top:-200px;
+    bottom: 0px;
     
 }
 .audio-player{
@@ -365,11 +375,10 @@ footer{
 }
 .heart-ban-icon{
     margin-left:130px;
-    position: absolute;
     display: inline-block;
     width:80px;
 }
-.heart-ban-icon i{
+.heart-ban-icon {
     margin-left:15px;
     font-size: 1.3rem;
     color:lightgrey;
@@ -387,7 +396,7 @@ footer{
     margin-left:26%;
     padding:0px 0px 5px 0px;
 }
-.media-control-icons i{
+.media-control-icons {
     color:lightgray;
     font-size:2rem;
 }
@@ -406,7 +415,6 @@ footer{
     
     padding:0;
     background-color:yellowgreen;
-    display: inline-block;
 }
 .time{
     display: inline-block;
@@ -417,10 +425,8 @@ footer{
 }
 .progress-thumb{
     margin-left:32%;
-    margin-top:-8px;
+    margin-top:-12px;
     position:absolute;
-}
-.progress-thumb i{
     color:yellowgreen;
 }
 .volume{/*this div contains the elements at the right corner of the audio player whoch has the volume controls*/
@@ -432,7 +438,7 @@ footer{
     position: relative;
     vertical-align: top;
 }
-.volume i{
+.volume > *{
     color:lightgrey;
     font-size: 1.3rem;
     margin-left:15px;
@@ -445,23 +451,21 @@ footer{
     height:1.3px;
     margin-left:10px;
     vertical-align: middle;
+    margin-bottom: 40px;
 }
 .volume-control{
     width:60%;
     height:100%;
     background-color:yellowgreen;
-    display: inline-block;
     margin:0;
 }
 .volume-thumb{
-    margin-top:-4px;
+    margin-left: 45px;
+    margin-top:-12px;
     display: inline-block;
     position: absolute;
-}
-.volume-thumb i{
     color:yellowgreen;
     font-size:0.7rem;
-    margin:0;
 }
 
 

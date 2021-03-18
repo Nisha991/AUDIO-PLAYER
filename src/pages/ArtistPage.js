@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ArtistBanner from '../components/ArtistBanner';
 import ArtistPlaylist from '../components/ArtistPlaylist';
 import SimilarArtist from '../components/SimilarArtist';
+import AudioPlayer from '../components/AudioPlayer';
 import '../Artistpage.css';
 export default class ArtistPage extends Component {
     render() {
@@ -12,6 +13,7 @@ export default class ArtistPage extends Component {
              <ArtistPlaylist />
             </main>
              <SimilarArtist />
+             <AudioPlayer /> 
              </div>
         )
     }

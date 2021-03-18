@@ -91,14 +91,16 @@ body{
     font-size:30px;
     color:white;
     position: relative;
+    transform: scale(1.4);
   
   }
   .red-dot{
    position:absolute; 
-  margin-left:-8px;
-  margin-top:6px;
+  margin-left:-15px;
+  margin-top:-6px;
   color:red;
   font-size:0.5rem;
+  transform: scale(0.5);
   }
   /*styling the account-holder image in the top right of the header*/
   .account-holder-image{
